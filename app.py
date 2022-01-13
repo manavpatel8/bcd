@@ -2,13 +2,11 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, render_template
 import pickle
-import json
-import joblib
-import xgboost
-from joblib import load,dump
+from sklearn.ensemble import RandomForestClassifier
+import sklearn
 
 app = Flask(__name__)
-model =pickle.load(open('vaksh.pkl','rb'))
+model =pickle.load(open('vk2.pkl','rb'))
 
 @app.route('/')
 def home():
